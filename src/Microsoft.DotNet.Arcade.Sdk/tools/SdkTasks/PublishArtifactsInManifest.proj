@@ -83,10 +83,10 @@
       <AkaMSCreatedBy Condition="'$(AkaMSCreatedBy)' == ''">dn-bot</AkaMSCreatedBy>
 
       <InstallersFeedKey>$(InstallersAzureAccountKey)</InstallersFeedKey>
-      <InstallersFeedKey Condition="'$(InternalBuild)' == 'true'">$(InternalInstallersTargetStaticFeedKey)</InstallersFeedKey>
+      <InstallersFeedKey Condition="'$(InternalBuild)' == 'true'">$(InternalInstallersAzureAccountKey)</InstallersFeedKey>
 
       <ChecksumsFeedKey>$(ChecksumsAzureAccountKey)</ChecksumsFeedKey>
-      <ChecksumsFeedKey Condition="'$(InternalBuild)' == 'true'">$(InternalChecksumsTargetStaticFeedKey)</ChecksumsFeedKey>
+      <ChecksumsFeedKey Condition="'$(InternalBuild)' == 'true'">$(InternalChecksumsAzureAccountKey)</ChecksumsFeedKey>
     </PropertyGroup>
 
     <Error
