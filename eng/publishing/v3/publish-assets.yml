@@ -69,9 +69,9 @@ jobs:
           /p:PackageBasePath='$(Build.ArtifactStagingDirectory)/PackageArtifacts/'
           /p:PublishInstallersAndChecksums=${{ parameters.publishInstallersAndChecksums }}
           /p:InstallersAzureAccountKey=$(dotnetcli-storage-key)
-          /p:InternalInstallersAzureAccountKey=$(dotnetclimsrc-access-key)
+          /p:InternalInstallersTargetStaticFeedKey=$(dotnetclimsrc-access-key)
           /p:ChecksumsAzureAccountKey=$(dotnetclichecksums-storage-key)
-          /p:InternalChecksumsAzureAccountKey=$(dotnetclichecksumsmsrc-storage-key)
+          /p:InternalChecksumsTargetStaticFeedKey=$(dotnetclichecksumsmsrc-storage-key)
           /p:AzureDevOpsFeedsKey='$(dn-bot-dnceng-artifact-feeds-rw)'
           /p:AzureStorageTargetFeedPAT='$(dotnetfeed-storage-access-key-1)'
           /p:AkaMSClientId=$(akams-client-id)
