@@ -59,7 +59,8 @@ jobs:
           /p:PublishingInfraVersion=3
           /p:BARBuildId=$(BARBuildId)
           /p:TargetChannels='${{ parameters.PromoteToChannelIds }}'
-          /p:IsInternalBuild=${{ and(ne(variables['System.TeamProject'], 'public'), contains(variables['Build.SourceBranch'], 'internal')) }}
+          /p:IsInternalBuild=true
+          /p:InternalBuild=true
           /p:NugetPath=$(NuGetExeToolPath)
           /p:MaestroApiEndpoint='$(MaestroApiEndPoint)'
           /p:BuildAssetRegistryToken='$(MaestroApiAccessToken)'
